@@ -1,0 +1,362 @@
+{
+  "info": {
+    "_postman_id": "43979548-cd2a-4ba8-8c99-d1ba62618b6a",
+    "name": "signed-url-generator",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32765571"
+  },
+  "item": [
+    {
+      "name": "generate-signed-url (Dev) Valid parameters",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{gcp-access-token}}",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{gcp-identity-token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://signed-url-generator-5afqr6ijoq-uc.a.run.app/generate-signed-url?bucket_name=amphi-static-content&blob_name=videos/balanced_sums_4.mov&project_id=lofty-root-378503&secret_id=professional-portfolio-sa-key",
+          "protocol": "https",
+          "host": [
+            "signed-url-generator-5afqr6ijoq-uc",
+            "a",
+            "run",
+            "app"
+          ],
+          "path": [
+            "generate-signed-url"
+          ],
+          "query": [
+            {
+              "key": "bucket_name",
+              "value": "amphi-static-content"
+            },
+            {
+              "key": "blob_name",
+              "value": "videos/balanced_sums_4.mov"
+            },
+            {
+              "key": "project_id",
+              "value": "lofty-root-378503"
+            },
+            {
+              "key": "secret_id",
+              "value": "professional-portfolio-sa-key"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "generate-signed-url (Dev) Missing parameters",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{gcp-access-token}}",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{gcp-identity-token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://signed-url-generator-5afqr6ijoq-uc.a.run.app/generate-signed-url?bucket_name=amphi-static-content&blob_name=videos/balanced_sums_4.mov&project_id=lofty-root-378503&secret_id=professional-portfolio-sa-key",
+          "protocol": "https",
+          "host": [
+            "signed-url-generator-5afqr6ijoq-uc",
+            "a",
+            "run",
+            "app"
+          ],
+          "path": [
+            "generate-signed-url"
+          ],
+          "query": [
+            {
+              "key": "bucket_name",
+              "value": "amphi-static-content"
+            },
+            {
+              "key": "blob_name",
+              "value": "videos/balanced_sums_4.mov"
+            },
+            {
+              "key": "project_id",
+              "value": "lofty-root-378503"
+            },
+            {
+              "key": "secret_id",
+              "value": "professional-portfolio-sa-key"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "generate-signed-url (Dev) Invalid secret",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{gcp-access-token}}",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{gcp-identity-token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://signed-url-generator-5afqr6ijoq-uc.a.run.app/generate-signed-url?bucket_name=amphi-static-content&blob_name=videos/balanced_sums_4.mov&project_id=lofty-root-378503&secret_id=professional-portfolio-sa-key",
+          "protocol": "https",
+          "host": [
+            "signed-url-generator-5afqr6ijoq-uc",
+            "a",
+            "run",
+            "app"
+          ],
+          "path": [
+            "generate-signed-url"
+          ],
+          "query": [
+            {
+              "key": "bucket_name",
+              "value": "amphi-static-content"
+            },
+            {
+              "key": "blob_name",
+              "value": "videos/balanced_sums_4.mov"
+            },
+            {
+              "key": "project_id",
+              "value": "lofty-root-378503"
+            },
+            {
+              "key": "secret_id",
+              "value": "professional-portfolio-sa-key"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "generate-signed-url (Local) Valid parameters",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "type": "text",
+              "key": "bucket_name",
+              "value": "my-bucket"
+            },
+            {
+              "type": "text",
+              "key": "blob_name",
+              "value": "path/to/object.txt"
+            },
+            {
+              "type": "text",
+              "key": "project_id",
+              "value": "my-project"
+            },
+            {
+              "type": "text",
+              "key": "secret_id",
+              "value": "my-secret"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/generate-signed-url?bucket_name=amphi-static-content&blob_name=videos/balanced_sums_4.mov&project_id=lofty-root-378503&secret_id=professional-portfolio-sa-key",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "generate-signed-url"
+          ],
+          "query": [
+            {
+              "key": "bucket_name",
+              "value": "amphi-static-content"
+            },
+            {
+              "key": "blob_name",
+              "value": "videos/balanced_sums_4.mov"
+            },
+            {
+              "key": "project_id",
+              "value": "lofty-root-378503"
+            },
+            {
+              "key": "secret_id",
+              "value": "professional-portfolio-sa-key"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl -v -G \"http://localhost:8080/generate-signed-url\" \\\n  --data-urlencode \"bucket_name=my-bucket\" \\\n  --data-urlencode \"blob_name=path/to/object.txt\" \\\n  --data-urlencode \"project_id=my-project\" \\\n  --data-urlencode \"secret_id=my-secret\""
+      },
+      "response": []
+    },
+    {
+      "name": "generate-signed-url (Local) Missing parameters",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "type": "text",
+              "key": "bucket_name",
+              "value": "my-bucket"
+            },
+            {
+              "type": "text",
+              "key": "blob_name",
+              "value": "path/to/object.txt"
+            },
+            {
+              "type": "text",
+              "key": "project_id",
+              "value": "my-project"
+            },
+            {
+              "type": "text",
+              "key": "secret_id",
+              "value": "my-secret"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/generate-signed-url?bucket_name=amphi-static-content&blob_name=videos/balanced_sums_4.mov&project_id=lofty-root-378503",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "generate-signed-url"
+          ],
+          "query": [
+            {
+              "key": "bucket_name",
+              "value": "amphi-static-content"
+            },
+            {
+              "key": "blob_name",
+              "value": "videos/balanced_sums_4.mov"
+            },
+            {
+              "key": "project_id",
+              "value": "lofty-root-378503"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl -v -G \"http://localhost:8080/generate-signed-url\" \\\n  --data-urlencode \"bucket_name=my-bucket\" \\\n  --data-urlencode \"blob_name=path/to/object.txt\" \\\n  --data-urlencode \"project_id=my-project\" \\\n  --data-urlencode \"secret_id=my-secret\""
+      },
+      "response": []
+    },
+    {
+      "name": "generate-signed-url (Local) Invalid secret",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "type": "text",
+              "key": "bucket_name",
+              "value": "my-bucket"
+            },
+            {
+              "type": "text",
+              "key": "blob_name",
+              "value": "path/to/object.txt"
+            },
+            {
+              "type": "text",
+              "key": "project_id",
+              "value": "my-project"
+            },
+            {
+              "type": "text",
+              "key": "secret_id",
+              "value": "my-secret"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/generate-signed-url?bucket_name=amphi-static-content&blob_name=videos/balanced_sums_4.mov&project_id=lofty-root-378503",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "generate-signed-url"
+          ],
+          "query": [
+            {
+              "key": "bucket_name",
+              "value": "amphi-static-content"
+            },
+            {
+              "key": "blob_name",
+              "value": "videos/balanced_sums_4.mov"
+            },
+            {
+              "key": "project_id",
+              "value": "lofty-root-378503"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl -v -G \"http://localhost:8080/generate-signed-url\" \\\n  --data-urlencode \"bucket_name=my-bucket\" \\\n  --data-urlencode \"blob_name=path/to/object.txt\" \\\n  --data-urlencode \"project_id=my-project\" \\\n  --data-urlencode \"secret_id=my-secret\""
+      },
+      "response": []
+    }
+  ]
+}
