@@ -1,5 +1,7 @@
 # signed-url-generator
 
+[![CI/CD](https://github.com/virtualhealthcitizen/signed-url-generator/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/virtualhealthcitizen/signed-url-generator/actions/workflows/ci-cd.yml)
+
 ## Build container
 
 ```bash
